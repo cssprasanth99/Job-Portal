@@ -9,9 +9,9 @@ export const clerkWebHook = async (req, res) => {
 
     // Verifying Header
     await whook.verify(JSON.stringify(req.body), {
-      "svix-id": req.header["svix-id"],
-      "svix-timestamp": req.header["svix-timestamp"],
-      "svix-signatur": req.header["svix-signature"],
+      "svix-id": req.headers["svix-id"],
+      "svix-timestamp": req.headers["svix-timestamp"],
+      "svix-signature": req.headers["svix-signature"],
     });
 
     // Getting data from request body
