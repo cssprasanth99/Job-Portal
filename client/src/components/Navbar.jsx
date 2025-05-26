@@ -40,7 +40,7 @@ const Navbar = () => {
             </button>
             <button
               onClick={(e) => openSignIn(e)}
-              className="bg-blue-600 text-white px-6 sm:px-9 py-2 rounded-full"
+              className="bg-blue-600 text-white px-6 sm:px-9 py-2 rounded-full cursor-pointer"
             >
               Login
             </button>

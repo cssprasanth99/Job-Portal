@@ -1,20 +1,22 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen">
       {/* Navbar for Recruiter Panel */}
       <div className="shadow py-4">
         <div className="px-5 flex justify-between items-center">
           <img
+            onClick={() => navigate("/")}
             className="max-sm:w-32 cursor-pointer"
             src={assets.logo}
             alt=""
           />
           <div className="flex items-center gap-3">
-            <p className="max-sm:hidden">Welcome,Prasanth</p>
+            <p className="max-sm:hidden">Welcome, Prasanth</p>
             <div className="relative group">
               <img
                 className="w-8 rounded-full"
