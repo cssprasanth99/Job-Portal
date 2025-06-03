@@ -119,9 +119,9 @@ export const postJob = async (req, res) => {
 
     await newJob.save();
 
-    res.json({ sucess: false, newJob });
+    res.json({ success: true, newJob });
   } catch (error) {
-    res.json({ sucess: false, message: error.message });
+    res.json({ success: false, message: error.message });
   }
 };
 
@@ -138,7 +138,7 @@ export const getCompanyJobApplicants = async (req, res) => {
 
     res.json({ success: true, applications });
   } catch (error) {
-    res.json({ sucess: false, message: error.message });
+    res.json({ success: false, message: error.message });
   }
 };
 

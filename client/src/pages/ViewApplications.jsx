@@ -48,6 +48,7 @@ const ViewApplications = () => {
     }
   };
 
+
   useEffect(() => {
     if (companyToken) {
       fetchCompanyJobApplications();

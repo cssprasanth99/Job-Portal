@@ -26,6 +26,7 @@ const AddJobs = () => {
         { title, description, location, level, category, salary },
         { headers: { token: companyToken } }
       );
+      console.log(data);
 
       if (data.success) {
         toast.success(data.message);
@@ -114,6 +115,7 @@ const AddJobs = () => {
           className="w-full px-3 py-2 border-2 border-gray-300 rounded sm:w-[120px]"
           onChange={(e) => setSalary(e.target.value)}
           min={0}
+          value={salary}
           type="number"
           placeholder="2500"
         />

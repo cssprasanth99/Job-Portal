@@ -10,7 +10,7 @@ const ManageJobs = () => {
   const navigate = useNavigate();
   const { backendUrl, companyToken } = useContext(appContext);
 
-  const [jobs, setJobs] = useState([]);
+  const [jobs, setJobs] = useState(false);
 
   //Fetch Company Jobs Applicants Data
   const fetchCompanyJobs = async () => {
@@ -50,6 +50,7 @@ const ManageJobs = () => {
       toast.error(error.message);
     }
   };
+
 
   useEffect(() => {
     if (companyToken) {
